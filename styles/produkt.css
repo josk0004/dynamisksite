@@ -1,0 +1,116 @@
+.produktgrid {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr 1fr;
+    grid-template-rows: auto;
+    gap: 1rem;
+    margin-top: 1rem;
+    margin-inline: 1rem;
+    background-color: var(--base);
+    padding: 1rem;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+}
+
+
+img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 10px;
+}
+
+.pi,
+.mn,
+.nm,
+.cl,
+.co,
+.in,
+.nu,
+.br,
+.ta,
+.name,
+.brand,
+.sizes,
+.choose,
+.size,
+.addto {
+    font-family: sans-serif;
+    color: var(--accent);
+    margin-bottom: 1rem;
+
+}
+
+.pi {
+    font-weight: bold;
+    font-size: 3vw;
+}
+
+.mn,
+.cl,
+.in,
+.br {
+    font-weight: bold;
+}
+
+.br {
+    font-size: 4vw;
+    margin-bottom: 0.5rem;
+}
+
+.nm,
+.co,
+.nu {
+    padding-left: 1rem;
+}
+
+.produktinfo {
+    border-right: solid var(--accent) 3px;
+}
+
+.name {
+    font-weight: bold;
+    font-size: 4vw;
+}
+
+.sizes {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.size {
+    border: solid var(--accent) 1px;
+    padding: 0.5rem;
+    border-radius: 10px;
+    margin-right: 8vw;
+    align-self: center;
+}
+
+.choose {
+    font-weight: bold;
+    align-self: center;
+}
+
+.addto {
+    font-weight: bold;
+    font-size: 2vw;
+    border: solid var(--accent) 1px;
+    text-align: center;
+    padding: 1rem;
+    border-radius: 10px;
+}
+
+
+@media screen and (max-width: 900px) {
+    .produktgrid {
+        grid-template-columns: 1fr;
+    }
+
+    .produktinfo {
+        order: 3;
+    }
+
+    .addto {
+        font-size: 8vw;
+    }
+
+}
