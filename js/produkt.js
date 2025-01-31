@@ -1,5 +1,5 @@
 let produktid = 1526;
-let produktgrid = document.querySelector(".produktgrid");
+const produktgrid = document.querySelector(".produktgrid");
 
 fetch(`https://kea-alt-del.dk/t7/api/products/${produktid}`)
     .then(response => response.json())
@@ -14,7 +14,6 @@ fetch(`https://kea-alt-del.dk/t7/api/products/${produktid}`)
                 <p class="nm">${data.productdisplayname}</p>
                 <p class="cl">Color</p>
                 <p class="co">${data.basecolour}</p>
-                <p class="brand">${data.brandname} | ${data.articletype}</p>
                 <p class="in">Inventory number</p>
                 <p class="nu">${data.id}</p>
                 <p class="br">${data.brandname}</p>
@@ -22,17 +21,22 @@ fetch(`https://kea-alt-del.dk/t7/api/products/${produktid}`)
             </div>
             <div>
                 <p class="name">${data.productdisplayname}</p>
-                  <p class="mn">Price</p>
+                <p class="brand">${data.brandname} | ${data.articletype}</p>
+                <p class="mn">Price</p>
                 <p class="nm">DKK ${data.price},-</p>
                 
                 <div class="sizes">
-                    <p class="choose">Choose a size</p>
-                    <div class="list">
-                    <p class="size">S</p>
-                    <p calss="arrow">&#11206;</p>
-                    </div>
+                    <p class="choose">Choose a size:</p>
+                    <select name="Size" id="cars">
+                        <optgroup label="Size">
+                              <option value="volvo">S</option>
+                              <option value="saab">M</option>
+                             <option value="mercedes">L</option>
+                              <option value="audi">XL</option>
+                         </optgroup>
+                    </select>
                 </div>
                 <p class="addto">Add To Basket</p>
             </div>
-        `
+        `;
     })
