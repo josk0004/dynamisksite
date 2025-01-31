@@ -69,20 +69,12 @@ img {
 
 .name {
     font-weight: bold;
-    font-size: 4vw;
+    font-size: 3vw;
 }
 
 .sizes {
     display: grid;
     grid-template-columns: 1fr 1fr;
-}
-
-.size {
-    border: solid var(--accent) 1px;
-    padding: 0.5rem;
-    border-radius: 10px;
-    margin-right: 8vw;
-    align-self: center;
 }
 
 .choose {
@@ -99,6 +91,18 @@ img {
     border-radius: 10px;
 }
 
+.list {
+    display: flex;
+    border: solid var(--accent) 1px;
+    padding: 0.8rem 0.5rem 0 0.5rem;
+    border-radius: 10px;
+    justify-content: space-between;
+}
+
+.brand {
+    font-weight: bold;
+}
+
 
 @media screen and (max-width: 900px) {
     .produktgrid {
@@ -113,4 +117,7 @@ img {
         font-size: 8vw;
     }
 
+    .name {
+        font-size: 5vw;
+    }
 }
