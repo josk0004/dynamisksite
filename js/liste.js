@@ -1,15 +1,13 @@
 const productList = document.querySelector('.produktliste');
 
-fetch('https://kea-alt-del.dk/t7/api/products')
+fetch('https://kea-alt-del.dk/t7/api/products?limit=10')
     .then((response) => response.json())
     .then((data) => showList(data));
 
 function showList(products) {
     console.log(products);
-    let markup = "";
-    products.map(product => {
-        markup +=
-            ` <div class="produktkort">
+    const markup = products.map((product) =>
+        ` <div class="produktkort">
             <a href="produkt.html" class="${product.soldout === 1 ? 'grayscale' : ''}"><img src="https://kea-alt-del.dk/t7/images/webp/640/${product.id}.webp" alt=""></a>
 
             <a href="produkt.html" class="npt">${product.productdisplayname}</a>
@@ -25,7 +23,7 @@ function showList(products) {
                 <a href="produkt.html">Sold Out</a>
             </div>
         </div> `
-    }).join("");
+    ).join("");
     console.log(markup);
     productList.innerHTML = markup;
 }
