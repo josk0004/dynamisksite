@@ -10,6 +10,12 @@ fetch(`https://kea-alt-del.dk/t7/api/products/${identity}`)
         produktgrid.innerHTML = `
         <div class="produktbillede">
                 <img src="https://kea-alt-del.dk/t7/images/webp/640/${identity}.webp" class="${data.soldout === 1 ? 'grayscale' : ''}" alt="">
+                <div class="rabat ${data.discount}">
+                <a href="produkt.html?id=${data.id}">${data.discount}%</a>
+            </div>
+            <div class="soldout ${data.soldout === 1 ? '' : 'null'}">
+                <a href="produkt.html?id=${data.id}">Sold Out</a>
+            </div>
             </div>
             <div class="produktinfo">
                 <p class="pi">Product Information</p>

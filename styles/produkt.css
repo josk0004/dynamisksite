@@ -137,7 +137,6 @@ img {
     padding: 0.5rem;
     border-radius: 10px 0 5px 0;
     position: absolute;
-    top: 20%;
 }
 
 .rabat {
@@ -146,7 +145,6 @@ img {
     padding: 0.5rem;
     border-radius: 10px 0 5px 0;
     position: absolute;
-    top: 20%;
 }
 
 .grayscale {
@@ -157,6 +155,12 @@ img {
 .null {
     opacity: 0;
     cursor: default;
+}
+
+.produktbillede {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
 }
 
 
