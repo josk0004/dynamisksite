@@ -9,6 +9,6 @@ function showCategories(categories) {
     const markup = categories.map((category) =>
         ` <a href="produktliste.html?category=${category.category}" class="category">${category.category}</a> `
     ).join("");
-    console.log(markup);
+    // console.log(markup);
     categoryList.innerHTML = markup;
 }
