@@ -27,8 +27,22 @@
         </nav>
     </header>
     <main>
+        <div class="filters">
+            <label for="gender">Gender:</label>
+            <select id="gender">
+                <option value="all">All</option>
+                <option value="Men">Men</option>
+                <option value="Women">Women</option>
+                <option value="Unisex">Unisex</option>
+            </select>
+
+            <label for="price">Max Price:</label>
+            <input type="range" id="price" min="0" max="9999" value="9999">
+            <span id="price-value">9999 DKK</span>
+        </div>
         <div class="produktliste">
         </div>
+        <button id="show-more">Show More</button>
     </main>
     <footer></footer>
     <script src="js/menu.js" defer></script>

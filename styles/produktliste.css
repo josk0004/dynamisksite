@@ -86,6 +86,45 @@ img {
     filter: grayscale(100%) brightness(0.5);
 }
 
+.filters {
+    margin-bottom: 20px;
+    margin-top: 1rem;
+    margin-inline: 1rem;
+}
+
+.filters label {
+    margin-right: 10px;
+}
+
+.filters select,
+.filters input {
+    margin-right: 20px;
+}
+
+.filters label {
+    color: var(--base);
+}
+
+select option,
+#price-value {
+    color: var(--base);
+}
+
+#price {
+    accent-color: var(--base);
+}
+
+
+
+#show-more {
+    margin-inline: auto;
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+    background-color: var(--base);
+    color: var(--accent);
+    border: none;
+    border-radius: 10px;
+}
 
 @media screen and (max-width: 900px) {
     .produktliste {
